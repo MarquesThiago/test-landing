@@ -1,0 +1,6 @@
+full 600px
+850width = layout/ fundo 500px
+650width = layout/ remover o titulo / fundo 400px
+450width = layout/ fundo = 250px
+390width = fundo = 150px
+320width = fundo = 50px

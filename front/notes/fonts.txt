@@ -1,0 +1,9 @@
+font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Quicksand', sans-serif;
+
+lato = title
+poppins = content
+rubik = header. button and footer
+quicksand = nome da compania
