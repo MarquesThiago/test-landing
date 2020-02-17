@@ -13,7 +13,7 @@
 }
 
 
-
+// primeiro link da pagina
 
 .container_first_menu_link{
     width: 250px;
@@ -34,10 +34,13 @@
     
 }
 
+// animação do primeiro link
+
 .link_menu:hover{
     cursor: pointer;
 }
 
+// separador do primeiro link
 .line_link{
     width: 72px;
     margin: -1px;
@@ -46,6 +49,8 @@
     border: solid 0px black;
     
 }
+
+// animação do separador do primeiro link
 
 .link_menu:hover ~ .line_link{
     animation: line_width 1s;
@@ -325,11 +330,13 @@
 
 @media screen and (max-width: 850px){
 
+    // cabeçalho container principal
     .header{
         padding-left: 20px;
         padding-right:20px;
     }
 
+    // container do primeiro link
     .container_first_menu_link{
         width: 100px;
         display: flex;
@@ -337,21 +344,25 @@
         
     }
 
+    // nome da compania 
     .container_name_company{
         left:50%;
         font-weight: 600;
         font-size: 25px;
     }
 
+    // imagem de fundo
     .container_background_img{
         height: 420px;
         
     }
 
+
     .background_header{
         height: 500px;
     }
 
+    // slogan
     .container_slogan{
         margin-top: 50px;
         line-height: 2;
@@ -360,14 +371,17 @@
 
 @media screen and (max-width: 650px){
 
+    // container do logo
     .container_logo{
         left:38%;
     }
 
+    // container nome da company
     .container_name_company{
         display:none;
     }
 
+    //imagem de fncdo 
     .container_background_img{
         height: 250px;
         display: flex;
@@ -379,6 +393,7 @@
         height: 400px;
     }
 
+    //sdlogan
     .container_slogan{
         margin-top: 200px;
     }
@@ -395,15 +410,17 @@
 
 @media screen and (max-width: 500px){
 
+    //logo 
     .container_logo{
         left:35%;
     }
 
+    //imagem de fundo
     .container_background_img{
         height: 220px;
     }
 
-
+    //slogan
     .container_slogan{
         margin-top: 200px;
     }
@@ -421,11 +438,12 @@
 
 @media screen and (max-width: 390px){
 
+    //logo
     .container_logo{
         left:30%;
     }
 
-
+    //slogan
     .container_slogan{
         margin-top: 150px;
     }
@@ -440,23 +458,28 @@
 }
 
 @media screen and (max-width: 320px){
-    
+
+    //primeiro link 
     .container_first_menu_link{
         width: 80px; 
     }
 
+    //link para o menu
     .link_menu{
         font-size: 16px;
     }
     
+    //logo
     .content_logo{
         left:20%;
     }
     
+    //imagem fundo
     .container_background_img{
         height: 50px;
     }
 
+    //slogan
     .container_slogan{
         margin-top: 300px;
     }

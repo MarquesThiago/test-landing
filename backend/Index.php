@@ -10,8 +10,12 @@ header("Access-Control-Allow-Headers: Content-Type");
 $dat = $_POST['nome'];
 echo $dat -> nome;
 
+
+//tentnado acesso  requisição envia da por medo post
 echo file_get_contents("php://input");
 
+
+//verificando se a requisição  chegando e se esta chegando algum valor 
 $userName = "user";
 $host_ = "localhost";
 $password = "password";

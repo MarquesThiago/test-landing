@@ -7,9 +7,13 @@ import "./Style/app.css"
 function App() {
   return (
     <>
+
+    {/* cabeçalho da pagina */}
       <div className = "header_pagines">
         <Header></Header>
       </div>
+
+      {/* conteudo da pagina  */}
       <div className = "container_router">
         <Router></Router>
       </div>

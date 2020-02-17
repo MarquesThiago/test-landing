@@ -8,9 +8,12 @@ export default function Content(){
     const [nome, setNome] = useState("")
     const [email, setEmail] = useState("")
     const [telefone, setTelefone] = useState("")
-    const FrontUrl = Axios.create("http://localhost:3000")
-    const url = "http://localhost:80/devTinpix/backend/index.php"
+    const FrontUrl = Axios.create("http://localhost:3000") //variavel de ambiente
+    const url = "http://localhost:80/devTinpix/backend/index.php" //variavel de ambiente
+    const overlay = document.querySelector('.overlay_lightbox')
+    const lightbox = document.querySelector('.lightbox')
     
+    // evento ao enviar formulario
     const HandleSubmit = async (e)=> {
 
         e.preventDefault()
@@ -31,18 +34,22 @@ export default function Content(){
         introductionData()
 
         // let obj2 = {'nome': nome, 'email': email, 'telefone': telefone}
-        let obj2 = new FormData
-        obj2.append("nome", nome) 
+        // let obj2 = new FormData
+        // obj2.append("nome", nome) 
         
         // await FrontUrl.post(url, obj)
         // await  FrontUrl.post(url,obj2).then(console.log(obj)).catch(console.log("not"))
 
+
+        // enviando requisição para o backend
         Axios({
-            method: 'post', // verbo http
+            method: 'POST', //  http
             url: url, // url
             data: {
-               nome: nome // Parâmetro 1 enviado
-                // Parâmetro 2 enviado
+               nome: nome,
+               email: email,
+                telefone: telefone
+                
              }
            }).then(
                console.log("funcional", typeof(nome))
@@ -63,18 +70,42 @@ export default function Content(){
         // })
 
         
+    }
+
+    //função de exibição da lightbox => respota do envio da requisão
+    // assim que o HandleSubmit tiver sucesso exibira o light box
+    
+    // e caso seja preferivel adicionando  o a div do overlay um evento onclick para retirar o lightbox
+
+    const  lightbox = () =>{
+
+        if(overlay.style.display == 'none'){
+
+            overlay.style.display = 'flex'
+            lightbox.style.display = 'flex'
+
+        }else{
+
+            overlay.style.display = 'none'
+            lightbox.style.display = 'none'
+        }
+        
 
     }
+
     return(
         <>
             <div className= "principal_container">
 
+                {/* seção sobre o concurso cultural */}
                 <section className = "concurse_culture">
 
+                    {/* imagem de referencia */}
                     <div className = "img_marketing">
                         <img className = "concurse_culture_img" src = {Festival} titile = "Concurso de cultura" alt = "imagem representativa do festival de cultura " cite = "Photo by Danny Howe on Unsplash"/>
                     </div>
 
+                    {/* artigo sobre  o concuros cultural */}
                     <article id = "concurso_" className = "article_concurse_culture">
                         
                         <h2 className = "title_article">Concurso Cultura</h2>
@@ -88,14 +119,17 @@ export default function Content(){
 
                 </section>
 
+                {/* seção de registro e informações pertinentes  */}
                 <section id= "regist" className = 'register'>
 
+                    {/* informações pertinentes ao formulario e a e-mail */}
                     <article className = 'info_register'>
                     <h2 className = "title_article" >Participe agora mesmo</h2>
                     <p className = "text_article" >Preencha os dados a seguir e participe de uma promoção especial</p>
                     <p className = "text_article" >Assim que clicar no botão enviado, você recebará um e-mail da confirmação de sua participação. No email esterão presentes mais informações sobre evento, localidade, assim como o nosso contato para possiveis duvidas</p>
                     </article>
 
+                    {/* formulario */}
                     <article className = "form">
                         <form   onSubmit = {HandleSubmit}>
                             <table> 
@@ -166,8 +200,10 @@ export default function Content(){
 
             </div>
 
+            {/* lightbox que aparece apos apretar o botão enviar  */}
             <div className = "overlay_lightbox">
 
+                {/* lightbox */}
                 <div className = "lightbox">
 
                     <div>

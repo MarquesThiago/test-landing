@@ -9,6 +9,7 @@
 
 }
 
+// seção do conculso cultural
 .concurse_culture{
     display: flex;
     flex-direction: row;
@@ -16,16 +17,19 @@
 
 }
 
+// container da imagem 
 .img_marketing{
     width: 50%;
     position: relative;
 }
 
+// imagem ilustrativa do concurso 
 .concurse_culture_img{
     position: relative;
     width: 80%;
 }
 
+// sitlo do artigo - concurso cultural
 .article_concurse_culture{
     width:40%;
     padding: 20px;
@@ -51,6 +55,7 @@
 
 }
 
+// seção de registro
 .register{
     display: flex;
     flex-direction: row;
@@ -60,12 +65,15 @@
 
 }
 
+// artlgo de informações
 .info_register{
     width: 40%;
     box-sizing: border-box;
     // position: absolute;
 
 }
+
+// formulario 
 .form{
     width: 40%;
     margin-top: 50px;
@@ -113,6 +121,7 @@
     
 }
 
+// lightbox
 .overlay_lightbox{
     display: none;
     position: fixed;
@@ -178,10 +187,12 @@
 
 @media screen and (max-width: 850px){
 
+    // container do concuros cultural
     .concurse_culture{
         flex-direction: column;
 
     }
+
 
     .concurse_culture .title_article{
         order: 1;
@@ -216,12 +227,14 @@
         width: 80%;
     }
 
+    // seção registo
     .register{
         justify-content: center;
         flex-direction: column;
 
     }
 
+    // artigo de informações
     .info_register{
         width: 80%;
         position: relative;
@@ -235,6 +248,7 @@
 
     }
 
+    // lightbox
     .lightbox > h2{
         margin-top: 40px;
     }
@@ -243,6 +257,7 @@
 
 @media screen and (max-width: 650px){
 
+    // lightbox
     .overlay_lightbox{
         height: 900px;
         padding-left: 10%;
@@ -260,11 +275,13 @@
 
 
 @media screen and (max-width: 415px){
-   
+
+//    formulario
     .form input{
         width: 220px;
     }
 
+    // lightbox
     .lightbox > div{
         left: 35%;
     }
@@ -277,10 +294,12 @@
 
 @media screen and (max-width: 350px){
    
+    // formulario
     .form input{
         width: 190px;
     }
 
+    // lightbox
     .lightbox > h2{
         margin-top: 120px;
     }
